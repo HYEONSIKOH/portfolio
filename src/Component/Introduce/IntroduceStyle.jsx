@@ -60,7 +60,7 @@ export const Container = styled.div`
   }
 `;
 export const LiquidShape = styled.div`
-  border: 2px solid black;
+  border: 2px solid ${(props) => props.theme.textColor};
   width: 250px;
   height: 250px;
   
@@ -84,17 +84,25 @@ export const TechSkillTop = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 3rem;
-  gap: 15px;
+  //gap: 15px;
 `;
 export const TechSKillTxt = styled.div`
   color: #333;
   margin-top: 5px;
   font-weight: 700;
-  color: #e0e0e0;
+  color: ${(props) => props.theme.textColor2};
 `;
 export const TechSKill = styled.img`
   width: 30px;
   height: 30px;
   margin-left: 20px;
   margin-right: 10px;
+`;
+
+export const LinkTop = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-left: 3.3rem;
+  //gap: 15px;
 `;

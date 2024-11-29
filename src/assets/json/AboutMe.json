@@ -1,0 +1,34 @@
+{
+  "project": {
+    "experience" : [
+      {
+        "date" : "2024.10 ~ 2025.03",
+        "descript" : "[프로그래머스] 데브코스: 클라우드 기반 (백엔드) 엔지니어링 2기 (진행 중)"
+      },
+      {
+        "date" : "2022.09 ~ 2023.07",
+        "descript" : "Google Developer Student Clubs Sangmyung 2nd Member"
+      }
+    ],
+    "award" : [
+      {
+        "date" : "2024.08",
+        "descript" : "캡스톤디자인 경진대회 (입선)"
+      },
+      {
+        "date" : "2023.09",
+        "descript" : "GDGXWhatever 프로젝트 핵토콘상(1등)"
+      }
+    ],
+    "certificate": [
+      {
+        "date": "2024.10",
+        "descript": "정보처리기사"
+      },
+      {
+        "date": "2024.11",
+        "descript": "SQLD"
+      }
+    ]
+  }
+}

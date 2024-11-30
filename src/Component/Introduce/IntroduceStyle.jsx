@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
+
 const breakpoints = [480, 768, 992, 1280];
 const media = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
-//import Leesoyuun2 from "../../assets/img/introduce/leesoyuun4.jpeg";
+
 
 export const Center = styled.div`
   display: flex;

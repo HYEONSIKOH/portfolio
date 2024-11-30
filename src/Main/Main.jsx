@@ -1,10 +1,9 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useEffect} from "react";
 import * as c from "../Component/Common/CommonStyle";
-import Header from "../Component/Header/Header";
 import { GlobalStyle } from "../Component/Theme/GlobalStyle";
-import { darkTheme, lightTheme } from "../Component/Theme/Theme";
 import Introduce from "../Component/Introduce/Introduce";
 import AboutMe from "../Component/AboutMe/AboutMe";
+import ToggleBtn from "../Component/Theme/ToggleBtn";
 // import Project from "../Component/Project/Project";
 // import ProjectDetail from "../Component/Project/ProjectDetail";
 // import TechSkill from "../Component/TechSkill/TechSkill";
@@ -14,10 +13,19 @@ const Main = () => {
     const aboutRef = useRef(null);
     const projectRef = useRef(null);
     const techSkillRef = useRef(null);
-    const [theme, setTheme] = useState("dark");
+
+    useEffect(() => {
+        const currentTheme = localStorage.getItem("OHS_PortfolioTheme");
+
+        if (currentTheme === null) {
+            const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+            const newTheme = mediaQuery.matches === true ? "dark" : "light";
+            localStorage.setItem("OHS_PortfolioTheme", newTheme);
+        }
+    }, []);
 
     const scrollToSection = (ref) => {
-
         if (ref.current !== null) {
             const offset = ref.current.offsetTop-94;
             window.scrollTo({
@@ -27,22 +35,15 @@ const Main = () => {
         }
     };
 
-    const toggleTheme = () => {
-        setTheme(() => {
-            return theme === "dark" ? "light" : "dark";
-        });
-    };
 
     return (
         <>
-            <GlobalStyle theme={theme === "dark" ? darkTheme : lightTheme}/>
-            <button onClick={toggleTheme} style={{ position: 'absolute', top: 20, right: 20 }}>
-                Toggle Theme
-            </button>
+            <GlobalStyle/>
+            <ToggleBtn/>
             {/*<Header scrollToSection={scrollToSection} homeRef={homeRef} aboutRef={aboutRef} projectRef={projectRef} techSkillRef={techSkillRef} />*/}
             <c.total>
                 <div ref={homeRef}>
-                    <Introduce theme={theme === "dark" ? darkTheme : lightTheme} />
+                    <Introduce/>
                 </div>
                 <div ref={aboutRef}>
                     <AboutMe/>

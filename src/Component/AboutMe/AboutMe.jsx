@@ -14,7 +14,7 @@ const AboutMe = () => {
                     <a.Name isEnName={true}>{`HYEONSIK OH`}</a.Name>
                 </c.Flex>
                 <c.Flex>
-                    <a href="mailto:leesoyun4206@icloud.com" style={{ display: "flex", alignItems: "center", color : "#333", textDecoration : "none", marginBottom : "10px" }}>
+                    <a href="mailto:ks06891@naver.com" style={{ display: "flex", alignItems: "center", color : "#333", textDecoration : "none", marginBottom : "10px" }}>
                         <a.Icon src={Email}/>
                         <a.InfoText>{`ks06891@naver.com`}</a.InfoText>
                     </a>

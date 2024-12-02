@@ -44,12 +44,12 @@ export const DetailAboutMe = styled.div`
 export const Title = styled.div`
   font-size: 1.1rem;
   font-weight: 400;
-  color: #999;
+  color: #999; // 요기
   margin-top: 2.35rem;
   margin-bottom: 0.5rem;
 `;
 export const Date = styled(Title)`
-  color: #333;
+  color: ${(props) => props.theme.textColor2};
   margin-top: 0.7rem;
   margin-bottom: 0;
   font-size: 0.98rem;

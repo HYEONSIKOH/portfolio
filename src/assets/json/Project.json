@@ -1,0 +1,22 @@
+{
+  "project": [
+    {
+      "name": "영화 추천 사이트 🎬",
+      "description" : "내가 본 영화와 유사한 영화 추천 웹사이트입니다. AI를 사용하여 키워드 기반, 내용 기반 그리고 협업 필터링을 사용하여 볼만한 영화를 추천합니다.",
+      "useLanguage" : ["Spring Boot","Spring JPA","Spring Security","MariaDB"],
+      "gitLink" : "https://github.com/HYEONSIKOH/Sortware_Project1_Back"
+    },
+    {
+      "name" : "OFI 👗",
+      "description" : "OFI는 옷을 잘 입지 못하는 사람과 패션디자인과를 나왔지만 포트폴리오를 쌓을 곳이 없는 학생들의 모든 니즈를 만족시키기 위해 만든 서비스입니다.",
+      "useLanguage" : ["Spring Boot", "Spring Security", "JPA", "OAuth", "MariaDB", "Redis"],
+      "gitLink" : "https://github.com/OutFitIn/OutFinIn-BE"
+    },{
+      "name" : "Have-bin \uD83D\uDDD1\uFE0F",
+      "description" : "영상처리(YOLO)와 사용자 참여를 통한 정밀화 된 쓰레기통 위치 제공 웹, 앱 서비스입니다.",
+      "useLanguage" : ["Spring Boot", "Spring Security", "JPA", "MariaDB", "Redis", "YOLO", "Flask" ,"React", "PWA"],
+      "gitLink" : "https://github.com/HYEONSIKOH/HaveBin",
+      "useLink" : "https://www.have-bin.com/"
+    }
+  ]
+}

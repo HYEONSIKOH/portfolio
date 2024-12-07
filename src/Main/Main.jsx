@@ -4,8 +4,8 @@ import { GlobalStyle } from "../Component/Theme/GlobalStyle";
 import Introduce from "../Component/Introduce/Introduce";
 import AboutMe from "../Component/AboutMe/AboutMe";
 import ToggleBtn from "../Component/Theme/ToggleBtn";
-// import Project from "../Component/Project/Project";
-// import ProjectDetail from "../Component/Project/ProjectDetail";
+import Project from "../Component/Project/Project";
+import ProjectDetail from "../Component/Project/ProjectDetail";
 // import TechSkill from "../Component/TechSkill/TechSkill";
 
 const Main = () => {
@@ -48,12 +48,9 @@ const Main = () => {
                 <div ref={aboutRef}>
                     <AboutMe/>
                 </div>
-                {/*<div ref={projectRef}>*/}
-                {/*    <Project/>*/}
-                {/*</div>*/}
-                {/*<div ref={techSkillRef}>*/}
-                {/*    <TechSkill/>*/}
-                {/*</div>*/}
+                <div ref={projectRef}>
+                    <Project/>
+                </div>
             </c.total>
         </>
     );

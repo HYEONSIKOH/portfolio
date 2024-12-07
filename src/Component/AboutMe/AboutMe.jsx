@@ -3,6 +3,7 @@ import * as c from "../Common/CommonStyle";
 import * as a from "./AboutMeStyle";
 import AboutMeJson from "../../assets/json/AboutMe.json";
 import Email from "../../assets/img/common/email.svg";
+import Email_light from "../../assets/img/common/email_light.svg";
 import Git from "../../assets/img/github.svg"
 import Git_light from "../../assets/img/github_light.svg"
 import {darkTheme, lightTheme} from "../Theme/Theme";
@@ -36,7 +37,7 @@ const AboutMe = () => {
                 </c.Flex>
                 <c.Flex>
                     <a href="mailto:ks06891@naver.com" style={{ display: "flex", alignItems: "center", color : theme.textColor2, textDecoration : "none", marginBottom : "10px" }}>
-                        <a.Icon src={Email}/>
+                        <a.Icon src={storedTheme === "dark" ? Email_light : Email}/>
                         <a.InfoText>{`ks06891@naver.com`}</a.InfoText>
                     </a>
                 </c.Flex>

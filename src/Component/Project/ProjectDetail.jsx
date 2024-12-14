@@ -4,18 +4,16 @@ import * as p from "./ProjectStyle";
 import * as c from "../Common/CommonStyle";
 import * as pd from "./ProjectDetailStyle";
 import ProjectDetailJson from "../../assets/json/ProjectDetail.json";
-import Header from "../Header/Header";
 import PhoneTool from "../../assets/img/common/phoneTool.jpg";
 import Check from "../../assets/img/common/check.png";
-import Geeks1 from "../../assets/img/project/geeks/geeks1.png";
+import Dbdbdeep from "../../assets/img/project/dbdbdeep/mainLogo.png";
 import OFI from "../../assets/img/project/ofi/useImg.png";
-import Portfolio from "../../assets/img/project/portfolio/useImg.png";
-// import PortfolioDesk from "../../assets/img/project/portfolio/useImgDesk.png";
+import Havebin1 from "../../assets/img/project/havebin/havebin1.jpeg";
 import GoBack from "../../assets/img/common/goback.png";
 
 const Geeks = () => {
     const projectParamsName = useParams();
-    let ProjectPhoto = [Geeks1,OFI,Portfolio];
+    let ProjectPhoto = [Dbdbdeep,OFI,Havebin1];
     let navigate = useNavigate();
     const { pathname } = useLocation();
 
@@ -23,7 +21,7 @@ const Geeks = () => {
         window.scrollTo(0, 0);
     }, [pathname]);
 
-    const project = ProjectDetailJson.projectDetail?.find(val => val.bigTitle == projectParamsName.projectParamsName)
+    var project = ProjectDetailJson.projectDetail?.find(val => val.bigTitle == projectParamsName.projectParamsName)
 
     if (!project) {
         return <div>프로젝트를 찾을 수 없습니다.</div>;

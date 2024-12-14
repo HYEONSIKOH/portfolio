@@ -51,9 +51,10 @@ const Main = () => {
                 <div ref={projectRef}>
                     <Project/>
                 </div>
+                <div style={{paddingBottom: '85px'}} />
             </c.total>
         </>
-    );
+);
 };
 
 export default Main;

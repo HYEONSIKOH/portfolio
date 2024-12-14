@@ -9,11 +9,12 @@ export const Goback = styled.img`
 export const Center = styled.div`
   display: flex;
   justify-content: center;
-  padding: 0px 20% 5% 20%;
+  padding: 0px 10% 5% 10%;
   min-height: calc(100vh - 200px);
-  width: 100%;
+  width: 80%;
   ${media[1]} {
-    padding: 0px 0px 5% 0px;
+    padding: 0px 15% 5% 15%;
+    margin: 0, auto;
   }
 `;
 export const ProjectName = styled.div`
@@ -33,16 +34,16 @@ export const ImgCenter = styled.div`
 `;
 export const PhoneTool = styled.img`
   width: 290px;
-  height: 500px;
+  height: 600px;
   position: relative;
-  z-index: 1;
+  z-index: 5;
 `;
 export const InnerImg = styled.img`
   position: absolute;
   z-index: 2;
-  width: 290px;
-  height: 500px;
-  padding: 30px 15px 20px 15px;
+  width: 265px;
+  height: 590px;
+  padding: 8px 15px 20px 15px;
   border-radius: 30px;
   -moz-border-radius: 30px;
   -khtml-border-radius: 30px;
@@ -61,7 +62,7 @@ export const ReviewTitle = styled.div`
 `;
 export const DetailExplain = styled.div`
   margin-left: 5.5rem;
-  max-width: calc(70% - 150px);
+  max-width: calc(60%);
   ${media[2]} {
     max-width: 100%;
     margin: 0px 2rem;

@@ -16,6 +16,9 @@ const Project = () => {
         let name = projectName.split(" ");
         name.pop();
         let urlName = name.join("");
+
+        if (urlName === "영화추천사이트") { urlName = "DbdbDeep"; }
+
         navigate("/project/" + urlName);
     };
     return (

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import HYEONSIKOH from "../../assets/img/introduce/ohs.jpg";
 
 const breakpoints = [480, 768, 992, 1280];
 const media = breakpoints.map((bp) => `@media (max-width: ${bp}px)`);
@@ -66,6 +67,7 @@ export const LiquidShape = styled.div`
   height: 250px;
   
   background-size: cover;
+  background-image: url(${HYEONSIKOH});
   animation: liquid 8s ease-in-out infinite;
 
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;

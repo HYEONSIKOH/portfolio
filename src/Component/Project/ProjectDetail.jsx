@@ -6,14 +6,14 @@ import * as pd from "./ProjectDetailStyle";
 import ProjectDetailJson from "../../assets/json/ProjectDetail.json";
 import PhoneTool from "../../assets/img/common/phoneTool.jpg";
 import Check from "../../assets/img/common/check.png";
-import Dbdbdeep from "../../assets/img/project/dbdbdeep/mainLogo.png";
 import OFI from "../../assets/img/project/ofi/useImg.png";
 import Havebin1 from "../../assets/img/project/havebin/havebin1.jpeg";
+import DbdbDeep1 from "../../assets/img/project/dbdbdeep/dbdbdeep1.jpeg";
 import GoBack from "../../assets/img/common/goback.png";
 
 const Geeks = () => {
     const projectParamsName = useParams();
-    let ProjectPhoto = [Dbdbdeep,OFI,Havebin1];
+    let ProjectPhoto = [DbdbDeep1,OFI,Havebin1];
     let navigate = useNavigate();
     const { pathname } = useLocation();
 

@@ -5,12 +5,14 @@ import ProjectJson from "../../assets/json/Project.json";
 import Dbdbdeep from "../../assets/img/project/dbdbdeep/mainLogo.png";
 import Ofi from "../../assets/img/project/ofi/ofi.png";
 import Havebin from "../../assets/img/project/havebin/mainLogo.svg";
+import WashPang from "../../assets/img/project/washpang/mainLogo.svg";
+import SoundLink from "../../assets/img/project/soundlink/mainLogo.svg";
 import Git from "../../assets/img/github.svg";
 import Link from "../../assets/img/link.svg";
 import Paper from "../../assets/img/common/paper.svg";
 
 const Project = () => {
-    let TitleImg = [Dbdbdeep, Ofi, Havebin];
+    let TitleImg = [Dbdbdeep, Ofi, Havebin, WashPang, SoundLink];
     const navigate = useNavigate();
     const handleClick = (projectName) => {
         let name = projectName.split(" ");

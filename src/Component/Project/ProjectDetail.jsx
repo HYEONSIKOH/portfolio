@@ -9,11 +9,16 @@ import Check from "../../assets/img/common/check.png";
 import OFI from "../../assets/img/project/ofi/useImg.png";
 import Havebin1 from "../../assets/img/project/havebin/havebin1.jpeg";
 import DbdbDeep1 from "../../assets/img/project/dbdbdeep/dbdbdeep1.jpeg";
+import WashPang1 from "../../assets/img/project/washpang/washpang1.png";
+import SoundLink1 from "../../assets/img/project/soundlink/soundlink1.png";
+import SoundLink_Architecture from "../../assets/img/project/soundlink/architecture.png";
 import GoBack from "../../assets/img/common/goback.png";
+import {discription} from "./ProjectDetailStyle";
 
 const Geeks = () => {
     const projectParamsName = useParams();
-    let ProjectPhoto = [DbdbDeep1,OFI,Havebin1];
+    let ProjectPhoto = [DbdbDeep1, OFI, Havebin1, WashPang1, SoundLink1];
+    let ProjectArchitecture = [undefined, undefined, undefined, undefined, SoundLink_Architecture];
     let navigate = useNavigate();
     const { pathname } = useLocation();
 
@@ -33,14 +38,14 @@ const Geeks = () => {
 
     return (
         <>
-            <pd.Goback src={GoBack} onClick={()=>handleBack()}/>
+            <pd.Goback src={GoBack} onClick={() => handleBack()}/>
             <pd.Center>
                 <p.Whole>
                     <pd.ProjectName>{project.name}</pd.ProjectName>
                     <pd.Date>{project.date}</pd.Date>
                     <c.FlexBetween>
-                        <pd.PhoneTool src={PhoneTool} />
-                        <pd.InnerImg src={ProjectPhoto[project?.photoNum]} />
+                        <pd.PhoneTool src={PhoneTool}/>
+                        <pd.InnerImg src={ProjectPhoto[project?.photoNum]}/>
                         <pd.DetailExplain>
                             {project.details?.map((detail) => (
                                 <>
@@ -49,13 +54,21 @@ const Geeks = () => {
                                     {detail.useReason?.map((reason) => (
                                         <c.Flex>
                                             <pd.Check src={Check}/>
-                                            <pd.Reason>{reason}</pd.Reason>
+                                            <pd.Reason>
+                                                {reason.summary}
+                                                <pd.discription>{reason.description}</pd.discription>
+                                            </pd.Reason>
                                         </c.Flex>
                                     ))}
                                 </>
                             ))}
                         </pd.DetailExplain>
                     </c.FlexBetween>
+                    <div style={{ marginTop: "3rem" }}>
+                        <hr style={{color: "black"}}/>
+                    </div>
+                    <pd.Architecture> {project.Architecture} </pd.Architecture>
+                    <pd.ArchitectureImg src={ProjectArchitecture[project?.photoNum]}/>
                 </p.Whole>
             </pd.Center>
         </>

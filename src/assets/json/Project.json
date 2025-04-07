@@ -19,7 +19,7 @@
       "useLink" : "https://www.have-bin.com/"
     },{
       "name" : "WashPang \uD83E\uDEE7",
-      "description" : "홈서비스를 기반으로 세탁 서비스를 중개하는 C2C를 기반 서비스.",
+      "description" : "홈서비스를 기반으로 세탁 서비스를 중개하는 C2C 기반 서비스.",
       "useLanguage" : ["Spring Boot", "Spring Security", "Kotlin", "JPA", "MariaDB", "Redis", "Feign"],
       "gitLink" : "https://github.com/HYEONSIKOH/WashPang_Kotlin"
     },{

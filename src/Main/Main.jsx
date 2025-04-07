@@ -14,16 +14,16 @@ const Main = () => {
     const projectRef = useRef(null);
     const techSkillRef = useRef(null);
 
-    useEffect(() => {
-        const currentTheme = localStorage.getItem("OHS_PortfolioTheme");
-
-        if (currentTheme === null) {
-            const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-
-            const newTheme = mediaQuery.matches === true ? "dark" : "light";
-            localStorage.setItem("OHS_PortfolioTheme", newTheme);
-        }
-    }, []);
+    // useEffect(() => {
+    //     const currentTheme = localStorage.getItem("OHS_PortfolioTheme");
+    //
+    //     if (currentTheme === null) {
+    //         const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    //
+    //         const newTheme = mediaQuery.matches === true ? "dark" : "light";
+    //         localStorage.setItem("OHS_PortfolioTheme", newTheme);
+    //     }
+    // }, []);
 
     const scrollToSection = (ref) => {
         if (ref.current !== null) {
@@ -39,7 +39,7 @@ const Main = () => {
     return (
         <>
             <GlobalStyle/>
-            <ToggleBtn/>
+            {/*<ToggleBtn/>*/}
             {/*<Header scrollToSection={scrollToSection} homeRef={homeRef} aboutRef={aboutRef} projectRef={projectRef} techSkillRef={techSkillRef} />*/}
             <c.total>
                 <div ref={homeRef}>

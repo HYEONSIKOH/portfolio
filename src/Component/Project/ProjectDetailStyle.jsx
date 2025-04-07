@@ -23,11 +23,13 @@ export const ProjectName = styled.div`
 `;
 export const Date = styled.div`
   text-align: center;
+  line-height: 1.1rem;
   font-size: 0.875rem;
   color: #111;
   font-weight: 400;
   padding-top: 2rem;
   margin-bottom: 60px;
+  white-space: pre-line;
 `;
 export const ImgCenter = styled.div`
 
@@ -83,14 +85,38 @@ export const Descript = styled.div`
   white-space: pre-wrap;
 `;
 export const Check = styled.img`
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 `;
 export const Reason = styled.div`
   width: calc(100% - 30px - 1rem);
   color: #7f7b7b;
   line-height: 1.3rem;
   margin-left: 1rem;
-  margin-bottom: 1rem;
   font-size: 1rem;
+  font-weight: bold;
+`;
+export const discription  = styled.div`
+  width: calc(100% - 30px - 1rem);
+  color: #7f7b7b;
+  line-height: 1.3rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  white-space: pre-line;
+  font-weight: lighter;
+`
+export const Architecture = styled.div`
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  text-align: center;
+  ${media[2]} {
+    margin-top: 30px;
+  }
+`;
+export const ArchitectureImg = styled.img`
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 2rem;
 `;

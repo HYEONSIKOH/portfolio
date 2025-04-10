@@ -9,7 +9,6 @@ import WashPang from "../../assets/img/project/washpang/mainLogo.svg";
 import SoundLink from "../../assets/img/project/soundlink/mainLogo.svg";
 import Git from "../../assets/img/github.svg";
 import Link from "../../assets/img/link.svg";
-import Paper from "../../assets/img/common/paper.svg";
 
 const Project = () => {
     let TitleImg = [Dbdbdeep, Ofi, Havebin, WashPang, SoundLink];

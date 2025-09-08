@@ -19,6 +19,7 @@ const Project = () => {
         let urlName = name.join("");
 
         if (urlName === "영화추천사이트") { urlName = "DbdbDeep"; }
+        if (urlName === "OFI(OutFit") { urlName = "OFI"; }
 
         navigate("/project/" + urlName);
     };

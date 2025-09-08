@@ -65,7 +65,7 @@ const Introduce = () => {
         <i.Center>
             <i.Whole>
                 <i.Title>{`Back-End Developer\nHyeonsik Oh `}</i.Title>
-                <i.SubDescription>{`안녕하세요. 새로운 도전을 시도하며 끊임없이 성장하고자 하는\n신입 개발자 오현식입니다!`}</i.SubDescription>
+                <i.SubDescription>{`새로운 도전을 시도하며, 함께 성장하는 개발자`}</i.SubDescription>
                 <i.TechSkillTop>
                     <i.TechSKillTxt theme={theme}>{`Tech Stack | `}</i.TechSKillTxt>
                     {TechSkillIcons?.map(tech => <i.TechSKill src={tech}/>)}

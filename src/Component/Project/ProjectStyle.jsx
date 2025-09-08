@@ -103,6 +103,7 @@ export const Languages = styled.div`
 export const UseLanguage = styled.div`
   font-weight: 600;
   margin-right: 0.7rem;
+  color: #888888
 `;
 export const Links = styled.div`
   display: flex;

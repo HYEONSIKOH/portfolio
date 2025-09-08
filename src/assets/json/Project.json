@@ -2,30 +2,30 @@
   "project": [
     {
       "name": "영화 추천 사이트 🎬",
-      "description" : "내가 본 영화와 유사한 영화 추천 웹사이트. AI를 사용하여 키워드, 내용 그리고 협업 필터링을 사용하여 볼만한 영화를 추천하는 서비스",
-      "useLanguage" : ["Spring Boot","Spring JPA","Spring Security","MariaDB"],
+      "description" : "AI를 활용해, 내가 본 영화와 유사한 영화 추천 웹 서비스.",
+      "useLanguage" : ["Java", "Spring Boot"],
       "gitLink" : "https://github.com/HYEONSIKOH/Sortware_Project1_Back"
     },
     {
-      "name" : "OFI 👗",
-      "description" : "OFI는 옷을 잘 입지 못하는 사람과 패션디자인과를 나왔지만 포트폴리오를 쌓을 곳이 없는 학생들의 모든 니즈를 만족시키기 위해 만든 서비스.",
-      "useLanguage" : ["Spring Boot", "Spring Security", "JPA", "OAuth", "MariaDB", "Redis"],
+      "name" : "OFI (Out Fit In)👗",
+      "description" : "옷을 잘 입지 못하는 사람과\n패션디자인과 학생을 연결해주는 코디네이션 플랫폼",
+      "useLanguage" : ["Java", "Spring Boot"],
       "gitLink" : "https://github.com/OutFitIn/OutFinIn-BE"
     },{
       "name" : "Have-bin \uD83D\uDDD1\uFE0F",
-      "description" : "영상처리(YOLO)와 사용자 참여를 통한 정밀화 된 쓰레기통 위치 제공 웹, 앱 서비스.",
-      "useLanguage" : ["Spring Boot", "Spring Security", "JPA", "MariaDB", "Redis", "YOLO", "Flask" ,"React", "PWA"],
+      "description" : "영상처리(YOLO)와 사용자 참여를 통한\n정밀화 된 쓰레기통 위치 제공 서비스.",
+      "useLanguage" : ["Java", "Spring Boot", "JavaScript", "React", "Python"],
       "gitLink" : "https://github.com/HYEONSIKOH/HaveBin",
       "useLink" : "https://www.have-bin.com/"
     },{
       "name" : "WashPang \uD83E\uDEE7",
-      "description" : "홈서비스를 기반으로 세탁 서비스를 중개하는 C2C 기반 서비스.",
-      "useLanguage" : ["Spring Boot", "Spring Security", "Kotlin", "JPA", "MariaDB", "Redis", "Feign"],
+      "description" : "세탁 서비스를 중개하는 C2C 기반 홈서비스 플랫폼.",
+      "useLanguage" : ["Java", "Kotlin", "Spring Boot"],
       "gitLink" : "https://github.com/HYEONSIKOH/WashPang_Kotlin"
     },{
       "name" : "SoundLink \uD83C\uDFA7",
-      "description" : "감정을 기록하고 공유할 수 있는 음악 기반 감성 소셜 플랫폼 웹, 앱 서비스.",
-      "useLanguage" : ["Spring Boot", "Spring Security", "JPA", "Query DSL", "MariaDB", "Redis", "Kafka", "AWS EC2" ,"Docker", "Nginx"],
+      "description" : "감정을 기록하고 공유할 수 있는 음악 기반 감성 SNS.",
+      "useLanguage" : ["Java", "Spring Boot"],
       "gitLink" : "https://github.com/HYEONSIKOH/SoundLink",
       "useLink" : "https://www.soundlink.kr/"
     }

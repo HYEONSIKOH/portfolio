@@ -21,9 +21,10 @@ export const Headername = styled.div`
   color: #4f66e3;
   font-weight: 700;
   font-size: 1.3rem;
-  ${media[2]} {
-    margin-top: 2rem;
-  }
+  margin-top: 3em;
+  // ${media[2]} {
+  //   margin-top: 2rem;
+  // }
 `;
 export const MoreTxt = styled.div``;
 export const HeaderDescript = styled.div`

@@ -25,7 +25,7 @@ const Introduce = () => {
     const [blogTheme, setBlogTheme] = useState(Sql_White); // 초기값 설정
 
     const TechSkillIcons
-        = [ Java, Spring_Boot, sqlTheme, Linux, awsTheme, docker];
+        = [ Java, Kotiln, Spring_Boot, sqlTheme, Linux, awsTheme, docker];
 
     useEffect(() => {
         // 테마 변경 함수

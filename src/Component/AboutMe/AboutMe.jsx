@@ -48,7 +48,7 @@ const AboutMe = () => {
                     </a>
                 </c.Flex>
                 <a.DetailAboutMe>{
-                    `\uD83C\uDF31 새로운 도전으로 문제 해결을 즐기는 개발자 \n\n\uD83D\uDD0D 경계를 확장하는 개발자 \n\n🤝 지식을 공유하며 함께 성장하는 개발자`
+                    `🎯 새로운 도전으로 문제 해결을 즐기는 개발자 \n\n👀 시야가 넓은 개발자 \n\n🤝 지식을 공유하며 함께 성장하는 개발자`
                 }</a.DetailAboutMe>
                 <a.Title theme={theme} >{`경험`}</a.Title>
                 {AboutMeJson.project.experience.map((val) => (

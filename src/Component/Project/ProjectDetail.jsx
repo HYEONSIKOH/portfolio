@@ -67,7 +67,7 @@ const Geeks = () => {
                             ))}
                         </pd.DetailExplain>
                     </c.FlexBetween>
-                    <div style={{marginTop: "3rem"}}>
+                    <div style={{marginTop: "10rem"}}>
                         <hr style={{color: "black"}}/>
                     </div>
                     <pd.Architecture> {project.Architecture} </pd.Architecture>

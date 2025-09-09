@@ -3,29 +3,29 @@
     {
       "name": "영화 추천 사이트 🎬",
       "description" : "AI를 활용해, 내가 본 영화와 유사한 영화 추천 웹 서비스",
-      "useLanguage" : ["Java", "Spring Boot"],
+      "useLanguage" : [],
       "gitLink" : "https://github.com/HYEONSIKOH/Sortware_Project1_Back"
     },
     {
       "name" : "OFI (Out Fit In)👗",
       "description" : "옷을 잘 입지 못하는 사람과\n패션디자인과 학생을 연결해주는 코디네이션 플랫폼",
-      "useLanguage" : ["Java", "Spring Boot"],
+      "useLanguage" : [],
       "gitLink" : "https://github.com/OutFitIn/OutFinIn-BE"
     },{
       "name" : "Have-bin \uD83D\uDDD1\uFE0F",
       "description" : "영상처리(YOLO)와 사용자 참여를 통한\n정밀화 된 쓰레기통 위치 제공 서비스",
-      "useLanguage" : ["Java", "Spring Boot", "JavaScript", "React", "Python"],
+      "useLanguage" : [],
       "gitLink" : "https://github.com/HYEONSIKOH/HaveBin",
       "useLink" : "https://www.have-bin.com/"
     },{
       "name" : "WashPang \uD83E\uDEE7",
       "description" : "세탁 서비스를 중개하는 C2C 기반 홈서비스 플랫폼",
-      "useLanguage" : ["Java", "Kotlin", "Spring Boot"],
+      "useLanguage" : [],
       "gitLink" : "https://github.com/HYEONSIKOH/WashPang_Kotlin"
     },{
       "name" : "SoundLink \uD83C\uDFA7",
       "description" : "감정을 기록하고 공유할 수 있는 음악 기반 감성 SNS",
-      "useLanguage" : ["Java", "Spring Boot"],
+      "useLanguage" : [],
       "gitLink" : "https://github.com/HYEONSIKOH/SoundLink",
       "useLink" : "https://www.soundlink.kr/"
     }

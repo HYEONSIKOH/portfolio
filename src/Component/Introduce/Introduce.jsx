@@ -7,6 +7,7 @@ import Kotlin from "../../assets/img/tech/kotlin.svg"
 import JS from "../../assets/img/tech/javascript.svg"
 
 // Framework
+import Spring from "../../assets/img/tech/spring.svg"
 import Spring_Boot from "../../assets/img/tech/spring_boot.svg"
 import ReactSvg from "../../assets/img/tech/react.svg"
 
@@ -38,6 +39,7 @@ const Introduce = () => {
         [Java, "Java"],
         [Kotlin, "Kotlin"],
         //[JS, "JavaScript"],
+        [Spring, "Spring"],
         [Spring_Boot, "Spring Boot"],
         //[ReactSvg, "React"],
         [Sql, "MySQL"],

@@ -1,87 +1,84 @@
-import React, { useState, useEffect } from "react";
-import { darkTheme, lightTheme } from "../Theme/Theme";
+import React from "react";
 import * as i from "./IntroduceStyle";
-import Java from "../../assets/img/tech/java.svg"
-import Spring_Boot from "../../assets/img/tech/spring_boot.svg"
-import Sql_Black from "../../assets/img/tech/sql_black.svg"
-import Sql_White from "../../assets/img/tech/sql_white.svg"
-import Git from "../../assets/img/github.svg"
-import Git_light from "../../assets/img/github_light.svg"
-import Blog from "../../assets/img/blog.svg"
-import Blog_light from "../../assets/img/blog_light.svg"
-import Linux from "../../assets/img/tech/linux.svg"
-import aws from "../../assets/img/tech/aws.svg"
-import Aws_light from "../../assets/img/tech/aws_light.svg"
-import docker from "../../assets/img/tech/docker.svg"
-import Kotiln from "../../assets/img/tech/kotlin.svg"
 
+// Lang
+import Java from "../../assets/img/tech/java.svg"
+import Kotlin from "../../assets/img/tech/kotlin.svg"
+import JS from "../../assets/img/tech/javascript.svg"
+
+// Framework
+import Spring_Boot from "../../assets/img/tech/spring_boot.svg"
+import ReactSvg from "../../assets/img/tech/react.svg"
+
+// DB
+import Sql from "../../assets/img/tech/sql_white.svg"
+import MariaDB from "../../assets/img/tech/mariadb.svg"
+
+// Broker
+import Kafka from "../../assets/img/tech/kafka.svg"
+import Redis from "../../assets/img/tech/redis.svg"
+
+// DevOps
+import Nginx from "../../assets/img/tech/nginx.svg"
+import docker from "../../assets/img/tech/docker.svg"
+import Linux from "../../assets/img/tech/linux.svg"
+import Github_Actions from "../../assets/img/tech/GitHub_Actions.svg"
+
+// Cloud
+import AWS from "../../assets/img/tech/aws.svg"
+
+// ETC
+import Git from "../../assets/img/github.svg"
+import Blog from "../../assets/img/blog.svg"
 
 const Introduce = () => {
     const storedTheme = localStorage.getItem("OHS_PortfolioTheme");
-    const [theme, setTheme] = useState(storedTheme === "dark" ? darkTheme : lightTheme);
-    const [sqlTheme, setSqlTheme] = useState(Sql_White); // 초기값 설정
-    const [awsTheme, setAwsTheme] = useState(Sql_White); // 초기값 설정
-    const [gitTheme, setGitTheme] = useState(Sql_White); // 초기값 설정
-    const [blogTheme, setBlogTheme] = useState(Sql_White); // 초기값 설정
 
-    const TechSkillIcons
-        = [ Java, Kotiln, Spring_Boot, sqlTheme, Linux, awsTheme, docker];
-
-    useEffect(() => {
-        // 테마 변경 함수
-        const updateTheme = () => {
-            const currentTheme = localStorage.getItem("OHS_PortfolioTheme");
-            setTheme(currentTheme === "dark" ? darkTheme : lightTheme);
-        };
-
-        // storage 이벤트 감지
-        window.addEventListener("storage", updateTheme);
-
-        // 컴포넌트 언마운트 시 이벤트 제거
-        return () => {
-            window.removeEventListener("storage", updateTheme);
-        };
-    }, []);
-
-    useEffect(() => {
-        // 0.3초 뒤에 sqlTheme 업데이트
-        const timer = setTimeout(() => {
-            const newSqlTheme = theme.textColor === "black" ? Sql_Black : Sql_White;
-            const newAwsTheme = theme.textColor === "black" ? aws : Aws_light;
-            const newGitTheme = theme.textColor === "black" ? Git : Git_light;
-            const newBlogTheme = theme.textColor === "black" ? Blog : Blog_light;
-
-            setSqlTheme(newSqlTheme);
-            setAwsTheme(newAwsTheme);
-            setGitTheme(newGitTheme);
-            setBlogTheme(newBlogTheme);
-        }, 300);
-
-        // 컴포넌트가 언마운트될 때 타이머 정리
-        return () => clearTimeout(timer);
-    }, [theme]); // `theme`가 변경될 때 실행
+    const techStack = [
+        [Java, "Java"],
+        [Kotlin, "Kotlin"],
+        //[JS, "JavaScript"],
+        [Spring_Boot, "Spring Boot"],
+        //[ReactSvg, "React"],
+        [Sql, "MySQL"],
+        [MariaDB, "MariaDB"],
+        [Kafka, "Kafka"],
+        [Redis, "Redis"],
+        [docker, "Docker"],
+        [Nginx, "Nginx"],
+        [Github_Actions, "GitHub Actions"],
+        [Linux, "Linux"],
+        [AWS, "AWS"]
+    ];
 
     return (
         <i.Center>
             <i.Whole>
                 <i.Title>{`Back-End Developer\nHyeonsik Oh `}</i.Title>
                 <i.SubDescription>{`새로운 도전을 시도하며, 함께 성장하는 개발자`}</i.SubDescription>
-                <i.TechSkillTop>
-                    <i.TechSKillTxt theme={theme}>{`Tech Stack | `}</i.TechSKillTxt>
-                    {TechSkillIcons?.map(tech => <i.TechSKill src={tech}/>)}
-                </i.TechSkillTop>
                 <i.LinkTop>
-                    <i.TechSKillTxt theme={theme}>{`Link | `}</i.TechSKillTxt>
+                    <i.TechSKillTxt>{`Link | `}</i.TechSKillTxt>
                     <a href="https://github.com/HYEONSIKOH" target="_blank">
-                        <i.TechSKill src={gitTheme}/>
+                        <i.TechSKill src={Git}/>
                     </a>
                     <a href="https://velog.io/@ks0689/posts" target="_blank">
-                        <i.TechSKill src={blogTheme}/>
+                        <i.TechSKill src={Blog}/>
                     </a>
                 </i.LinkTop>
+                <i.TechSkillTop>
+                    <i.TechSKillTxt>{`Tech | `}</i.TechSKillTxt>
+                    <i.TechSkillRow>
+                        {techStack?.map(tech =>
+                            <i.TechSkillDiv>
+                                <i.TechSKillSvg src={tech[0]}/>
+                                <i.TechSKillName>{tech[1]}</i.TechSKillName>
+                            </i.TechSkillDiv>
+                        )}
+                    </i.TechSkillRow>
+                </i.TechSkillTop>
             </i.Whole>
             <i.Container>
-            <i.LiquidShape theme={theme}></i.LiquidShape>
+                <i.LiquidShape></i.LiquidShape>
             </i.Container>
         </i.Center>
     );

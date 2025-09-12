@@ -40,7 +40,7 @@ export const SubDescription = styled.div`
   white-space: pre-wrap;
   line-height: 1.5;
   margin-top: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   ${media[2]} {
     font-size: 1rem;
   }
@@ -85,27 +85,59 @@ export const LiquidShape = styled.div`
 `;
 export const TechSkillTop = styled.div`
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 530px;
+  margin-top: 1rem;
+`;
+export const TechSkillRow = styled.div`
+  display: flex;
   flex-wrap: wrap;
-  margin-top: 3rem;
-  gap: 15px;
+  gap: 8px;
+`;
+export const TechSkillDiv = styled.div`
+  display: inline-flex;
+  align-items: center;
+  margin-top: 5px;
+  gap: 4px;
+  padding: 6px 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  white-space: nowrap;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, sans-serif;
+`;
+export const TechSKillSvg = styled.img`
+  width: 16px;
+  height: 16px;
+  display: block;
+  flex: 0 0 16px;
+`;
+export const TechSKillName = styled.span`
+  font-weight: 500;
+  font-size: 14px;
+  color: #686d6f;
+  line-height: 1px;
 `;
 export const TechSKillTxt = styled.div`
-  color: #333;
-  margin-top: 5px;
+  margin-top: 8px;
   font-weight: 700;
+  min-width: 47px;
+  text-align: right;
   color: ${(props) => props.theme.textColor2};
 `;
 export const TechSKill = styled.img`
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 5px
+  
 `;
-
 export const LinkTop = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 1rem;
-  margin-left: 3.3rem;
   gap: 15px;
 `;

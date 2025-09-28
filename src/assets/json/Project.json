@@ -21,7 +21,7 @@
       "name" : "WashPang \uD83E\uDEE7",
       "description" : "세탁 서비스를 중개하는 C2C 기반 홈서비스 플랫폼",
       "useLanguage" : [],
-      "gitLink" : "https://github.com/HYEONSIKOH/WashPang_Kotlin"
+      "gitLink" : "https://github.com/HYEONSIKOH/WashPang"
     },{
       "name" : "SoundLink \uD83C\uDFA7",
       "description" : "감정을 기록하고 공유할 수 있는 음악 기반 감성 SNS",

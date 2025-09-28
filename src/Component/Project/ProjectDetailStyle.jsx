@@ -43,9 +43,9 @@ export const PhoneTool = styled.img`
 export const InnerImg = styled.img`
   position: absolute;
   z-index: 2;
-  width: 265px;
+  width: 268px;
   height: 590px;
-  padding: 8px 15px 20px 15px;
+  padding: 8px 15px 20px 13px;
   border-radius: 30px;
   -moz-border-radius: 30px;
   -khtml-border-radius: 30px;

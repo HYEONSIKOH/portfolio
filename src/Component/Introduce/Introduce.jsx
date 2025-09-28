@@ -57,7 +57,7 @@ const Introduce = () => {
         <i.Center>
             <i.Whole>
                 <i.Title>{`Back-End Developer\nHyeonsik Oh `}</i.Title>
-                <i.SubDescription>{`새로운 도전 속에서 답을 찾아가는 개발자`}</i.SubDescription>
+                <i.SubDescription>{`서비스 흐름을 이해하고, 효율적인 아키텍처를 설계하는 개발자`}</i.SubDescription>
                 <i.LinkTop>
                     <i.TechSKillTxt>{`Link | `}</i.TechSKillTxt>
                     <a href="https://github.com/HYEONSIKOH" target="_blank">

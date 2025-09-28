@@ -29,15 +29,15 @@
               "description": "JWT를 쿠키에 저장하는 방식으로 로그인 기능을 구현\n세션에 로그인 정보를 저장 시, 서버 메모리를 지속적으로 사용하게 되어 부하가 발생. JWT는 클라이언트에 토큰을 저장하여 서버 부하를 줄였음."
             },{
               "summary": "[DB] 반복적인 SQL 작성과 객체-관계 불일치 문제",
-              "description": "→ Spring JPA를 도입하여 유저 및 게시판 데이터 CRUD 구현\nORM을 활용해 불필요한 SQL 문법을 줄이고, 객체지향적인 개발을 가능하도록 개선"
+              "description": "Spring JPA를 도입하여 유저 및 게시판 데이터 CRUD 구현\nORM을 활용해 불필요한 SQL 문법을 줄이고, 객체지향적인 개발을 가능하도록 개선"
             },{
               "summary": "[외부 API] Python으로 구현한 협업필터링 머신러닝 데이터를 받아야 함. (외부 데이터 수신)",
-              "description": "→ Python의 Flask 서버에서 추천 영화를 생성하고, 기본 API 서버와 RestTemplete를 통해 연동"
+              "description": "Python의 Flask 서버에서 추천 영화를 생성하고, 기본 API 서버와 RestTemplete를 통해 연동"
             }
           ]
         },{
           "title" : "결과 ✅",
-          "detail" : "1. 비슷한 유형의 영화를 시청한 사용자들이 선호하는 영화를 추천하는 기능(협업필터링 사용)\n2. 사용자가 선호하는 영화 장르를 기반으로 유사한 영화를 추천하는 기능"
+          "detail" : "1. API가 정상적으로 요청 및 응답을 수행\n2. 비슷한 유형의 영화를 시청한 사용자들이 선호하는 영화를 추천(협업필터링)\n3.사용자가 선호하는 영화 장르를 기반으로 유사한 영화를 추천"
         }
       ]
     },{
@@ -53,13 +53,10 @@
           "title" : "기술스택 \uD83D\uDEE0",
           "detail": "[Backend] Spring Boot, Spring Security, JPA, MariaDB, Redis\n[Cloud] cloudtype.io"
         },{
-          "title": "문제",
-          "detail": ""
+          "title": "제작이유 \uD83C\uDFA4",
+          "detail": "옷을 잘 입고 싶은 유저와 포트폴리오가 필요한 코디네이터를 연결해주며\n서로의 니즈를 동시에 충족할 수 있도록 제작된 플랫폼."
         },{
-          "title": "해결방법",
-          "detail": ""
-        },{
-          "title" : "해결과정 \uD83D\uDD11️",
+          "title" : "문제 및 해결과정 \uD83D\uDD11️",
           "useReason": [
             {
               "summary": "[DevOps] GitHub에서 Commit 시, 수동 배포가 필요해 비효율적.",
@@ -76,7 +73,7 @@
           ]
         },{
           "title" : "결과 ✅",
-          "detail" : ""
+          "detail" : "1. 일반 유저가 맘에드는 코디네이터한테 채팅 요청 및 대화를 통하여 옷 코디를 받을 수 있음\n2. 코디네이터가 본인의 포트폴리오를 등록하고, 이를 통해 일반 유저에게 자신의 스타일을 어필할 수 있음"
         },{
           "title" : "성과 🏆",
           "detail" : "[GDG X Whatever] '6주 프로덕트 메이커 챌린지' - 핵토콘상(1등)"
@@ -153,14 +150,15 @@
           "title" : "기술스택 \uD83D\uDEE0",
           "detail": "[Lang] Java, Kotlin\n[Backend] Spring Boot, Spring Security, JPA, MariaDB, Redis, Feign\n[UI] JSP, Thymeleaf"
         },{
-          "title": "문제",
-          "detail": ""
+          "title": "목표",
+          "detail": "UI(JSP, Thymeleaf)와 Spring Boot를 연동하여, 세탁 서비스 예약 및 결제 기능을 레거시 UI를 통해 구현"
         },{
-          "title": "해결방법",
-          "detail": ""
-        },{
-          "title" : "해결과정 \uD83D\uDD11️",
+          "title" : "문제 및 해결과정 \uD83D\uDD11️",
           "useReason": [
+            {
+              "summary": "[결제] 세션 기반 결제번호 관리의 비효율 및 일관성 문제",
+              "description": "세션을 쓰지 않는 구조에서 세션 구현 부담과 다중 탭 접근 시 결제 상태 불일치 위험이 존재. \n결제 건마다 고유 키를 생성해 Redis에 저장하고, 완료 시 삭제하거나 TTL로 자동 만료되도록 변경하여 자원 사용을 줄이고 어떤 경로에서도 일관되게 처리되도록 안정성 개선."
+            },
             {
               "summary": "[외부 API] RestTemplate로 외부 API에게 요청 보내는 코드가 장황하고, 유지보수가 어려움.",
               "description": "-> Kotlin Spring Boot에서 FeignClient을 통해 외부 API에게 요청 및 응답.\nFeign을 사용하면 인터페이스 기반의 선언형 프로그래밍 방식이라 코드가 훨씬 깔끔해져 가독성과 유지보수성이 향상"
@@ -172,7 +170,7 @@
           ]
         },{
           "title" : "결과 ✅",
-          "detail" : ""
+          "detail" : "1. 세탁 예약부터 결제, 배송, 리뷰 작성까지 세탁 예약 서비스 플로우를 구현 및 안정적으로 작동\n2. JSP와 Thymeleaf를 통해 UI와 백엔드가 연동되어, 웹페이지를 제공"
         }
       ]
     },{

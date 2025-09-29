@@ -61,19 +61,20 @@
             {
               "summary": "[DevOps] GitHub에서 Commit 시, 수동 배포가 필요해 비효율적.",
               "description": "Cloudtype.io를 선택하여 GitHub Repository와 연동. \n(자동 재배포가 가능해, 배포 효율성을 개선함)"
-            },
-            {
+            },{
               "summary": "[데이터 관리] 이메일 인증번호가 DB에 영구적으로 저장되어, 보안과 관리 측면에서 취약.",
               "description": "[Before(DB)]\n인증번호를 RDB에 저장 및 삭제하는 로직을 구현. \n생성시각도 함께 저장하여, 유효기간(3분)을 초과한 경우 실패 처리.\n[After(Redis TTL)]\nRedis의 TTL(Time To Live)를 사용하여 인증번호를 저장. 일정 시간이 지나면 자동으로 삭제되도록 구현. (데이터 관리 효율성을 높임)"
-            },
-            {
+            },{
               "summary": "[사용자] 회원가입 절차가 번거로워, 사용자 유입에 장애가 될 수 있었음.",
-              "description": "→ 카카오 API를 연동하여 간편한 소셜 로그인 기능을 제공"
+              "description": "카카오 API를 연동하여 간편한 소셜 로그인 기능을 제공"
+            },{
+              "summary":"[데이터 관리] 소셜 로그인과 기존 일반 로그인 연동 문제.",
+              "description": "기존 회원 DB에 소셜 로그인의 고유ID값을 저장하여, 동일 이메일로 가입된 계정이 있으면 기존 계정과 연동되도록 구현"
             }
           ]
         },{
           "title" : "결과 ✅",
-          "detail" : "1. 일반 유저가 맘에드는 코디네이터한테 채팅 요청 및 대화를 통하여 옷 코디를 받을 수 있음\n2. 코디네이터가 본인의 포트폴리오를 등록하고, 이를 통해 일반 유저에게 자신의 스타일을 어필할 수 있음"
+          "detail" : "1. 일반 유저가 맘에드는 코디네이터한테 채팅 요청 및 대화를 통하여 옷 코디를 받을 수 있음\n2. 코디네이터가 본인의 포트폴리오를 등록하고, 이를 통해 일반 유저에게 자신의 스타일을 어필할 수 있음\n3. 기존 로그인 방식에서 Kakao oAuth2를 통한 간편 로그인 기능 추가되어, 접근성 향상"
         },{
           "title" : "성과 🏆",
           "detail" : "[GDG X Whatever] '6주 프로덕트 메이커 챌린지' - 핵토콘상(1등)"
@@ -151,19 +152,28 @@
           "detail": "[Lang] Java, Kotlin\n[Backend] Spring Boot, Spring Security, JPA, MariaDB, Redis, Feign\n[UI] JSP, Thymeleaf"
         },{
           "title": "목표",
-          "detail": "UI(JSP, Thymeleaf)와 Spring Boot를 연동하여, 세탁 서비스 예약 및 결제 기능을 레거시 UI를 통해 구현"
+          "detail": "다양한 방식을 통해, 코드 작성 및 유지보수의 효율성을 높임."
         },{
           "title" : "문제 및 해결과정 \uD83D\uDD11️",
           "useReason": [
             {
+              "summary" : "[언어] Java의 장황한 코드와 반복되는 보일러 플레이트 코드",
+              "description": "Kotlin으로 전환하여, 간결하고 가독성 높은 코드로 유지보수성 향상\n(Null Safety, 자유로운 타입 선언 등 다양한 기능 활용)"
+            },{
+              "summary": "[코드] RestTemplate로 외부 API에게 요청 보내는 코드가 장황하고, 유지보수가 어려움.",
+              "description": "Kotlin Spring Boot에서 FeignClient을 통해 외부 API에게 요청 및 응답하도록 마이그레이션\n인터페이스 기반의 선언형 프로그래밍 방식이라 코드가 훨씬 깔끔해짐.\n(가독성 및 유지보수성 향상)"
+            }, {
+              "summary" : "[UI] JSP로 작성된 UI가 복잡하고, 유지보수가 어려움",
+                "description": "Thymeleaf로 전환하여, 템플릿 문법이 직관적이고, HTML과의 통합성이 높아 유지보수성 향상"
+            }
+          ]
+        },{
+          "title" : "추가 해결 \uD83D\uDD11️",
+          "useReason": [
+            {
               "summary": "[결제] 세션 기반 결제번호 관리의 비효율 및 일관성 문제",
-              "description": "세션을 쓰지 않는 구조에서 세션 구현 부담과 다중 탭 접근 시 결제 상태 불일치 위험이 존재. \n결제 건마다 고유 키를 생성해 Redis에 저장하고, 완료 시 삭제하거나 TTL로 자동 만료되도록 변경하여 자원 사용을 줄이고 어떤 경로에서도 일관되게 처리되도록 안정성 개선."
-            },
-            {
-              "summary": "[외부 API] RestTemplate로 외부 API에게 요청 보내는 코드가 장황하고, 유지보수가 어려움.",
-              "description": "-> Kotlin Spring Boot에서 FeignClient을 통해 외부 API에게 요청 및 응답.\nFeign을 사용하면 인터페이스 기반의 선언형 프로그래밍 방식이라 코드가 훨씬 깔끔해져 가독성과 유지보수성이 향상"
-            },
-            {
+              "description": "세션을 쓰지 않는 구조에서 세션 구현 부담과 다중 탭 접근 시 결제 상태 불일치 위험이 존재. \n결제 건마다 고유 키를 생성해 Redis에 저장하고, 완료 시 삭제하거나 TTL로 자동 만료되도록 변경.\n(자원 사용을 줄이고 어떤 경로에서도 일관되게 처리되도록 안정성 개선)"
+            },{
               "summary": "[보안] RefreshToken의 저장 및 관리 문제",
               "description": "→ RefreshToken을 Redis에 저장해, 빠른 접근성과 TTL을 활용한 자동 만료를 적용.\nRTR(Refresh Token Rotation) 방식을 도입해 AccessToken 재발급 시 RefreshToken도 갱신되도록 하여 토큰 탈취 위험을 최소화"
             }

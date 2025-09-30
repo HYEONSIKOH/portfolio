@@ -89,7 +89,7 @@ export const ProjectDescript = styled.div`
 export const ProjectImg = styled.img`
   width: 250px;
   height: auto;
-  border-radius: 16px;
+  border-radius: 40px;
   padding: 10px;
   cursor: pointer;
 `;
